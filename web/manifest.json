@@ -1,6 +1,6 @@
 {
-    "name": "el_reprobado",
-    "short_name": "el_reprobado",
+    "name": "yes_no_ejemplo",
+    "short_name": "yes_no_ejemplo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
