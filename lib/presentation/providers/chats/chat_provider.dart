@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yes_no_ejemplo/config/helpers/get_yes_no_answer.dart';
 
+import '../../../config/helpers/get_yes_no_answer.dart';
 import '../../../domain/dtos/message.dart';
 
 class ChatProvider extends ChangeNotifier {

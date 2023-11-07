@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HerMessageBubble extends StatelessWidget {
   final String message;
   final String? urlGif;
-  const HerMessageBubble({super.key, this.message='',  this.urlGif});
+  const HerMessageBubble({super.key, this.message = '', this.urlGif});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,15 @@ class HerMessageBubble extends StatelessWidget {
           // width: 10,
           decoration: BoxDecoration(
               color: colors.tertiary, borderRadius: BorderRadius.circular(20)),
-          child:  Padding(
+          child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text(message,
+            child: Text(
+              message,
               style: const TextStyle(color: Colors.white),
             ),
           ),
         ),
-        const SizedBox(height: 5),
+        const SizedBox(height: 6),
         _ImageBubble(urlGif: urlGif),
         const SizedBox(height: 10),
       ],
@@ -33,16 +34,17 @@ class HerMessageBubble extends StatelessWidget {
 }
 
 class _ImageBubble extends StatelessWidget {
-    final String? urlGif;
+  final String? urlGif;
 
-  const _ImageBubble({ this.urlGif});
+  const _ImageBubble({this.urlGif});
   @override
   Widget build(BuildContext context) {
     // return const Placeholder();
     final size = MediaQuery.of(context).size;
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
-      child: Image.network(urlGif!,
+      child: Image.network(
+        urlGif!,
         width: size.width * 0.7,
         height: 150,
         fit: BoxFit.cover,
@@ -54,7 +56,7 @@ class _ImageBubble extends StatelessWidget {
                     height: 150,
                     padding:
                         const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    child: const Text('cargando la imagen...'),
+                    child: const Text('Loading..'),
                   ),
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:yes_no_ejemplo/config/theme/app_theme.dart';
-import 'package:yes_no_ejemplo/presentation/providers/chats/chat_provider.dart';
+import 'config/theme/app_theme.dart';
+import 'presentation/providers/chats/chat_provider.dart';
 import 'presentation/screens/chat/chat_screen.dart';
 
 void main() {
@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [ChangeNotifierProvider(create: (_) => ChatProvider())],
       child: MaterialApp(
-        title: 'yes no App',
+        title: 'Aplicacion de Mensajes',
         debugShowCheckedModeBanner: false,
-        theme: AppTheme(selectedColor: 1).theme(),
+        theme: AppTheme(selectedColor: 5).theme(),
         home: const ChatScreen(),
       ),
     );

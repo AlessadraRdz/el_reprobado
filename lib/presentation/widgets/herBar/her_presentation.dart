@@ -6,7 +6,7 @@ class HerPresentation extends StatelessWidget implements PreferredSizeWidget {
 
   const HerPresentation({
     super.key,
-    this.nombre = 'mi vida, mi amor',
+    this.nombre = 'Jennifer',
     this.urlAvatar =
         'https://pbs.twimg.com/profile_images/597967561909805056/kTlNI7RH_400x400.jpg',
   });

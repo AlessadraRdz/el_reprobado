@@ -1,13 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:yes_no_ejemplo/domain/dtos/message.dart';
-import 'package:yes_no_ejemplo/infrastructure/entities/yes_no_entity.dart';
-
+import 'package:el_reprobado/domain/dtos/message.dart';
+import 'package:el_reprobado/infrastructure/entities/yes_no_entity.dart';
 // https://quicktype.io/
+
 class GetYesNoAnswer {
   final _dio = Dio();
   Future<Message> getAnswer() async {
-    final resultSet = await _dio.get(
-        'https://yesno.wtf/assets/yes/14-b57c6dc03aa15a4b18f53eb50d6197ee.gif');
+    final resultSet = await _dio.get('http://yesno.wtf/api');
     final yesNoEntity = YesNoEntity.fromJsonMap(resultSet.data);
     return Message(
         text: yesNoEntity.answer == 'yes' ? 'si' : 'no',
