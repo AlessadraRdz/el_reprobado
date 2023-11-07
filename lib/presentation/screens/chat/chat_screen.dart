@@ -13,6 +13,7 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.yellow,
       appBar: HerPresentation(
         nombre: 'Jennifer Aniston',
         urlAvatar:
